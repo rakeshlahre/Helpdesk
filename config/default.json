@@ -1,0 +1,5 @@
+{
+  "PORT": 3002,
+  "DB_CONNECTION_STRING": "postgres://rakesh:rakesh@localhost:5432/helpdesk",
+  "SESSION_COOKIE_SECURE": false
+}
