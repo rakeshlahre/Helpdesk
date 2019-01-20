@@ -3,6 +3,7 @@ import Login from '../components/auth/Login'
 import Register from '../components/auth/Register'
 import Home from '../components/Home'
 import Logout from '../components/auth/Logout'
+import Dashboard from '../components/Dashboard'
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     meta: {
       requiresAuth: true,
     }
+  },
+    {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard
   }
 ]
 

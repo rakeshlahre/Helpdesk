@@ -21,7 +21,7 @@ process.on('uncaughtException', (err) => {
 const startHttpSever = async () => {
   const app = express();
   require('./middleware-wrapper');
-  
+
   // add uuid to each request
   const assignId = function (req, res, next) {
     req.id = uuid.v4();
@@ -53,6 +53,7 @@ const startHttpSever = async () => {
 
   router.use('/auth', require('./routes/auth')());
   router.use('/sessions',require('./routes/sessions')());
+  router.use('/twitter', require('./routes/twitter')());
 
   app.use('/api', router);
 

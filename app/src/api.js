@@ -61,5 +61,13 @@ export default {
   },
   onUserLogout() {
     return post('auth/logout');
+  },
+
+  connectTwitter() {
+    return get('auth/twitter-login');
+  },
+
+  getUserTweets() {
+    return get('twitter/user_timeline');
   }
 };
