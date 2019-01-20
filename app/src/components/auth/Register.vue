@@ -59,7 +59,6 @@ export default {
       api
         .onUserRegister(this.username, this.password)
         .then(data => {
-          console.log(data)
           this.$store.dispatch("onLogin", data);
           this.$router.push({ path: '/' });
           toastr.success('Logged In successfully');

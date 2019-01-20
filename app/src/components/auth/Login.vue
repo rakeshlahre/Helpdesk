@@ -38,6 +38,7 @@ import bFormInput from "bootstrap-vue/es/components/form-input/form-input";
 import bFormGroup from "bootstrap-vue/es/components/form-group/form-group";
 import bButton from "bootstrap-vue/es/components/button/button";
 import toastr from "toastr";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "login",
@@ -53,6 +54,12 @@ export default {
     };
   },
 
+  computed: {
+    ...mapGetters({
+      isAuthenticated: 'isAuthenticated'
+    })
+  },
+
   components: {
     bForm: bForm,
     bFormInput: bFormInput,
@@ -61,7 +68,6 @@ export default {
   },
   methods: {
     login() {
-      console.log(this.username, this.password);
       api
         .onUserLogin(this.username, this.password)
         .then(data => {

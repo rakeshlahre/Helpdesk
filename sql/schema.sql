@@ -3,7 +3,12 @@ CREATE TABLE users (
   username text NOT NULL,
   password text NOT NULL,
   email text NULL,
-  twitter_user_id text NULL,
+  twitter_user_id bigint NULL,
+  twitter_screen_name text NULL,
+  twitter_access_token text null,
+  twitter_access_token_secret text null,
+  twitter_request_token text null,
+  twitter_request_token_secret text null,
   date_joined timestamp with time zone NOT NULL DEFAULT NOW()
 );
 
